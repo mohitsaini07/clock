@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background: #2f363e;
+}
+.container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.clock .hands {
+  position: relative;
+  top: 10rem;
+  transform: rotate(270deg);
+}
+.clock .number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.3rem;
+  opacity: 0.2;
+  font-family: "Josfin Sans", sans-serif;
+  transform: rotate(var(--rotation));
+  padding: 0.9rem;
+}
+.clock .number b {
+  display: inline-block;
+  transform: rotate(calc(-1 * (var(--rotation))));
+}
+.clock .number1 {
+  --rotation: 30deg;
+}
+.clock .number2 {
+  --rotation: 60deg;
+}
+.clock .number3 {
+  --rotation: 90deg;
+}
+.clock .number4 {
+  --rotation: 120deg;
+}
+.clock .number5 {
+  --rotation: 150deg;
+}
+.clock .number6 {
+  --rotation: 180deg;
+}
+.clock .number7 {
+  --rotation: 210deg;
+}
+.clock .number8 {
+  --rotation: 240deg;
+}
+.clock .number9 {
+  --rotation: 270deg;
+}
+.clock .number10 {
+  --rotation: 300deg;
+}
+.clock .number11 {
+  --rotation: 330deg;
+}
+.hour_hand,
+.minute_hand,
+.second_hand {
+  position: absolute;
+  left: 49%;
+  bottom: 50%;
+  transform-origin: bottom center;
+  width: 6px;
+  height: 6px;
+}
+.hour_hand {
+  position: absolute;
+  width: 8px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgb(30, 27, 27);
+}
+.minute_hand {
+  width: 8px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgb(133, 133, 133);
+}
+.second_hand {
+  width: 3px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgb(255, 21, 21);
+}
+.center_point {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #ddd1d1;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.content {
+  margin-left: 200px;
+  text-align: center;
+}
+.content h1 {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 3rem;
+  background: rgb(40, 40, 40);
+  padding: 1rem;
+  color: #929292;
+  border-radius: 5px;
+}
+.content h2 {
+  color: #fff;
+  font-weight: 100;
+  padding: 0.8rem;
+  font-family: "Jost", sans-serif;
+}
+.content span {
+  color: rgb(62, 154, 154);
+}
